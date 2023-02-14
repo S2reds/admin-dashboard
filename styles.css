@@ -38,6 +38,7 @@ body {
     border-radius: 30px;
     background-color: #a7f3d0;
     border: 0;
+    padding: 0 20px;
 
 }
 
@@ -49,6 +50,13 @@ body {
     padding: 0 50px;
 }
 
+.topnav svg {
+    height: 25px;
+}
+
+.topnav img {
+    height: 50px;
+}
 
 .botnav {
     display: flex;
@@ -57,14 +65,23 @@ body {
     padding: 0 50px;
     gap: 25px;
 }
+
+.botnav img {
+    height: 80px;
+}
+
+.botnav h1 {
+    font-size: 30px;
+}
+
 .bot {
     margin-right: auto;
+    
 }
 .nav {
     grid-area: nav;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    background-color: ;
 }
 
 .navbutton {
