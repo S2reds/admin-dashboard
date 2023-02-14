@@ -4,6 +4,7 @@
     box-sizing: border-box;
     /* border: 1px solid black; */
     font-family: 'Lucida Console', 'Courier New', monospace;
+    letter-spacing: -1px;
 }
 body {
     height: 100vh;
@@ -18,17 +19,36 @@ body {
 .sidebar {
     grid-area: sidebar;
     display: grid;
-    grid-template-rows: 1fr 3fr 3fr;
-    height: 80vh;
-    padding-top: 50px;
-    padding-left: 100px;
-    font-size: 30px;
+    grid-template-rows: 100px 2fr 2fr;
+    height: 100vh;
+    padding-left: 30px;
+    font-size: 20px;
+    background-color: #047857;
+    color: white;
+}
+
+.sidetop {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.sidetop svg {
+    height: 40px;
+}
+
+.sidenav svg {
+    height: 30px;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 .sidemid, .sidebot {
     display: grid;
     height: 150px;
     gap: 15px;
+    padding-top: 10px;
+    grid-template-rows: repeat(auto-fit, 1fr);
 }
 
 #search {
@@ -68,6 +88,7 @@ body {
 
 .botnav img {
     height: 80px;
+    padding-bottom: 10px;
 }
 
 .botnav h1 {
@@ -76,12 +97,13 @@ body {
 
 .bot {
     margin-right: auto;
-    
+
 }
 .nav {
     grid-area: nav;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    background-color: #10b981;
 }
 
 .navbutton {
@@ -89,13 +111,64 @@ body {
     font-size: 15px;
     font-weight: bolder;
     border-radius: 30px;
-    background-color: #10b981;
-    color: white;
+    background-color: #a7f3d0;
     letter-spacing: .1rem;
     border: 0;
 }
 
 .main {
     grid-area: main;
+    background-color: #e2e8f0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 12fr;
+    grid-template-areas: 
+    "mainheader mainheader"
+    "cards announce";
+}
+.mainheader {
+    display: flex;
+    padding: 15px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    grid-area: mainheader;
+    align-items: end;
+ 
 }
 
+.mainheader h2:last-child {
+    margin-right: 95px;
+}
+
+.cards {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 720px;
+    width: 850px;
+    padding: 10px;
+    gap: 25px;
+    grid-area: cards;
+}
+
+.card {
+    border-radius: 15px ;
+    border: 1px solid black;
+    border-left: 10px solid #34d399;
+    background-color: #ffffff;
+}
+
+.announce {
+    grid-area: announce;
+    width: 250px;
+    height: 500px;
+    display: grid;
+    height: 720px;
+    padding: 10px 10px 10px 0;
+    grid-template-rows: 5fr 1fr 5fr;
+}
+
+.announce h2 {
+    align-self: end;
+    padding-bottom: 10px;
+}
