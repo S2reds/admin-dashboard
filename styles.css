@@ -228,3 +228,7 @@ body {
     height: 50px;
     border-radius: 500px;
 }
+
+.announce > .card:last-child {
+    width: 275px;
+}
